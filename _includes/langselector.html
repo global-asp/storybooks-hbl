@@ -1,0 +1,10 @@
+{% if page.layout == "story" %}<div class="float-{{default_right}}">{% include pdf_button.html tooltip=default_left %}</div>{% endif %}
+
+<div class="float-{{default_right}}">
+	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
+		<option selected="" disabled="">{{site.loc.nav_change_language}}</option>
+		<option value="{{ "/stories" | prepend: site.baseurl }}/{{ site.lang1_code }}/{% if page.layout == "levelindex" %}level{{ page.level }}{% else %}{{ page.id }}{% endif %}">{{ site.lang1 }}</option>{% if site.langs_number > 1 %}
+		<option value="{{ "/stories" | prepend: site.baseurl }}/{{ site.lang2_code }}/{% if page.layout == "levelindex" %}level{{ page.level }}{% else %}{{ page.id }}{% endif %}">{{ site.lang2 }}</option>{% endif %}{% if site.langs_number > 2 %}
+		<option value="{{ "/stories" | prepend: site.baseurl }}/{{ site.lang3_code }}/{% if page.layout == "levelindex" %}level{{ page.level }}{% else %}{{ page.id }}{% endif %}">{{ site.lang3 }}</option>{% endif %}
+{% include loc_langmenu.html %}	</select>
+</div>

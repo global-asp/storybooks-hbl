@@ -1,0 +1,26 @@
+<div class="modal" id="modal-pdf">{% if page.shortcodeloc %}{% assign shortcode = page.shortcodeloc %}{% else %}{% assign shortcode = page.shortcode %}{% endif %}
+  <a href="#close" class="modal-overlay" aria-label="{{site.loc.download_close}}" onclick="pdfdl()"></a>
+  <div class="modal-container">
+    <div class="modal-header">
+      <a href="#close" class="btn btn-clear float-{{default_right}}" aria-label="{{site.loc.download_close}}" onclick="pdfdl()"></a>
+      <div class="modal-title h5">{{site.loc.download_options}}</div>
+    </div>
+    <div class="modal-body">
+      <div class="content">
+        <h4>{{site.loc.editions_reg_pdfs}}</h4>
+        <ul>
+          <li><strong><a href="{{site.pdf_root}}/{{ page.language }}/{{ page.language }}-{{ page.id }}_{{ shortcode }}.pdf" target="_blank">{{site.loc.editions_reg_mono}}<br><center><img src="{{ "/css" | prepend: site.baseurl }}/editions/landscape-mono.svg" width="100"></center></a></strong></li>
+          <li><a href="{{site.editions_root}}/wordless/{{ page.id }}_{{ shortcode }}-wordless.pdf" target="_blank">{{site.loc.editions_wordless_landscape}}<br><center><img src="{{ "/css" | prepend: site.baseurl }}/editions/landscape-wordless.svg" width="100"></center></a></li>
+          <li><a href="{{site.editions_root}}/imageless/{{ page.language }}/{{ page.language }}-{{ page.id }}_{{ shortcode }}-imageless.pdf" target="_blank">{{site.loc.editions_noimg_mono}}<br><center><img src="{{ "/css" | prepend: site.baseurl }}/editions/landscape-imageless.svg" width="100"></center></a></li>
+        </ul>
+{% if site.langs_number == 1 %}
+{% include editions1.html %}{% elsif site.langs_number == 2 %}
+{% include editions2.html %}{% elsif site.langs_number == 3 %}
+{% include editions3.html %}{% endif %}
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" onclick="pdfdl()">{{site.loc.download_close}}</a>
+    </div>
+  </div>
+</div>

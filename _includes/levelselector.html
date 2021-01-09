@@ -1,0 +1,11 @@
+<div class="float-{{default_right}}">{% if page.language %}{% assign lang = page.language %}{% else %}{% assign lang = site.lang1_code %}{% endif %}
+	<select class="btn btn-lg" onchange="window.location=this.value">
+		<option selected="" disabled="">{{site.loc.nav_change_level}}</option>
+		<option value="{{ "/stories" | prepend: site.baseurl }}/{{lang}}/level1">{{site.loc.nav_level1}}</option>
+		<option value="{{ "/stories" | prepend: site.baseurl }}/{{lang}}/level2">{{site.loc.nav_level2}}</option>
+		<option value="{{ "/stories" | prepend: site.baseurl }}/{{lang}}/level3">{{site.loc.nav_level3}}</option>
+		<option value="{{ "/stories" | prepend: site.baseurl }}/{{lang}}/level4">{{site.loc.nav_level4}}</option>
+<!-- 		<option value="{{ "/stories" | prepend: site.baseurl }}/{{lang}}/level5">{{site.loc.nav_level5}}</option> -->
+		<option value="{{ "/stories" | prepend: site.baseurl }}/{{lang}}">{{site.loc.nav_all_levels}}</option>
+	</select>
+</div>

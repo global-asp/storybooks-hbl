@@ -1,0 +1,23 @@
+<div id="colophon" class="columns">
+	<div class="column col-7 col-lg-12 col-md-12 col-sm-12">
+		<h5><span class="colophon-heading">{{site.loc.metadata_author}}:</span> {{page.text}}</h5>
+		<h5><span class="colophon-heading">{{site.loc.metadata_illustrator}}:</span> {{page.illustration}}</h5>{% if page.translation != "" %}
+		<h5><span class="colophon-heading">{{site.loc.metadata_translator}}:</span> {{page.translation}}</h5>{% endif %}{% if page.reader != "" %}
+		<h5><span class="colophon-heading">{{site.loc.metadata_reader}}:</span> {{page.reader}}</h5>{% endif %}
+		<h5><span class="colophon-heading">{{site.loc.metadata_language}}:</span> <a href="{{ "/stories" | prepend: site.baseurl }}/{{page.language}}">{{page.langname}}</a></h5>
+		<h5><span class="colophon-heading">{{site.loc.metadata_level}}:</span> <a href="{{ "/stories" | prepend: site.baseurl }}/{{page.language}}/level{{page.level}}">{% include loc_leveltext.html %}</a></h5>
+		<h5><span class="colophon-heading">{{site.loc.metadata_asp_source}}:</span> {% include loc_aspsource.html %}</h5>
+
+		<div><a rel="license" href="https://creativecommons.org/licenses/{{page.license}}/{{page.license_version}}.0/{{site.loc.cc_deed}}" target="_blank"><img alt="{{site.loc.cc_license}}" style="border-width:0" src="https://i.creativecommons.org/l/{{page.license}}/{{page.license_version}}.0/88x31.png" /></a><br />{% include loc_cclink.html %}</div>
+
+	</div>
+	<div class="column col-5 col-lg-12 col-md-12 col-sm-12">
+		<h5>{% include loc_readmore.html %}</h5>{% for tale in site.pages %}{% if tale.level == {{page.level}} and tale.language == {{page.language}} and {{tale.id}} != {{page.id}} %}
+			<label class="chip"><a href="{{ "/stories" | prepend: site.baseurl }}/{{tale.language}}/{{tale.id}}/">{{tale.title}}</a></label>{% endif %}{% endfor %}
+	</div>
+</div>
+<div>
+<h5>{{site.loc.nav_options}}</h5>
+	<a class="btn btn-lg" href="{{ "/stories" | prepend: site.baseurl }}/{{page.language}}" class="button">{{site.loc.nav_back}}</a> {% include pdf_button.html tooltip="top" %}
+<br><br>
+</div>

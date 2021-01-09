@@ -1,0 +1,29 @@
+<a class="btn btn-lg" href="{{ "/stories" | prepend: site.baseurl }}/{{page.language}}">{{site.loc.nav_back}}</a><br><br>
+
+<div class="columns" id="text01">
+	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="{{site.image_root}}/{{page.id}}/01.jpg"></div>
+	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
+		<h1><span class="def">{{page.title}}</span>
+			<span class="l1">{{ page.l1title }}</span>{% if site.langs_number > 1 %}
+			<span class="l2">{{ page.l2title }}</span>{% endif %}{% if site.langs_number > 2 %}
+			<span class="l3">{{ page.l3title }}</span>{% endif %}
+		</h1>
+		<div class="btn-group cover-buttons">
+			<a href="#text02" class="btn btn-lg" title="{{site.loc.audio_next}}"><i class="icon-arrow-down"></i></a>
+			<button class="btn btn-lg{% if page.audio_available == "false" %} disabled{% endif %}" id="playbutton01" onclick="playpause('01')" title="{{site.loc.audio_play}}"><i class="icon-volume-up"></i></button>{% if page.audio_available == "true" %}
+			<audio id="audio01" onended="resetbutton('01')" src="{{site.audio_root}}/{{page.language}}/{{page.id}}/mp3/01.mp3"></audio>{% endif %}
+<!-- {% capture tabs %}			{% endcapture %}{% include switcher_container.html indent=tabs %} -->
+		</div>{{rtl_metadata}}
+		<h3><span class="tooltip tooltip-{{default_right}}" data-tooltip="{{site.loc.metadata_author}}"><img class="cover-icon cover-icon-text" src="{{ "/css" | prepend: site.baseurl }}/pencil.svg" alt="{{site.loc.metadata_author}}"></span> {{page.text}}</h3>
+		<h3><span class="tooltip tooltip-{{default_right}}" data-tooltip="{{site.loc.metadata_illustrator}}"><img class="cover-icon cover-icon-text" src="{{ "/css" | prepend: site.baseurl }}/art.svg" alt="{{site.loc.metadata_illustrator}}"></span> {{page.illustration}}</h3>{% if page.translation != "" %}
+		<h3><span class="tooltip tooltip-{{default_right}}" data-tooltip="{{site.loc.metadata_translator}}"><img class="cover-icon cover-icon-text" src="{{ "/css" | prepend: site.baseurl }}/global.svg" alt="{{site.loc.metadata_translator}}"></span> {{page.translation}}</h3>{% endif %}{% if page.reader != "" %}
+		<h3><span class="tooltip tooltip-{{default_right}}" data-tooltip="{{site.loc.metadata_reader}}"><img class="cover-icon cover-icon-text" src="{{ "/css" | prepend: site.baseurl }}/megaphone.svg" alt="{{site.loc.metadata_reader}}"></span> {{page.reader}}</h3>{% endif %}
+		<h3><span class="tooltip tooltip-{{default_right}}" data-tooltip="{{site.loc.metadata_language}}"><img class="cover-icon cover-icon-text" src="{{ "/css" | prepend: site.baseurl }}/language.svg" alt="{{site.loc.metadata_language}}"></span> <a href="{{ "/stories" | prepend: site.baseurl }}/{{page.language}}">{{page.langname}}</a></h3>
+		<h3><span class="tooltip tooltip-{{default_right}}" data-tooltip="{{site.loc.metadata_level}}"><img class="cover-icon cover-icon-text" src="{{ "/css" | prepend: site.baseurl }}/level.svg" alt="{{site.loc.metadata_level}}"></span> <a href="{{ "/stories" | prepend: site.baseurl }}/{{page.language}}/level{{page.level}}">{% include loc_leveltext.html %}</a></h3>
+		<h3><span class="tooltip tooltip-{{default_right}}" data-tooltip="{{site.loc.audio_narrate}}">{% if page.audio_available == "true" %}<img class="cover-icon cover-icon-audio" src="{{ "/css" | prepend: site.baseurl }}/speaker.svg" alt="{{site.loc.audio_narrate_tooltip}}"></span> <audio id="audioplayer" controls><source src="{{site.audio_root}}/{{page.language}}/{{page.id}}/{{page.id}}.mp3" type="audio/mpeg"></audio>{% else %}<img class="cover-icon cover-icon-text" src="{{ "/css" | prepend: site.baseurl }}/speaker.svg" alt="{{site.loc.audio_narrate_tooltip}}"></span> <span class="cover_msg">{{site.loc.audio_not_available}}</span>{% endif %}</h3>
+{% if page.audio_available == "true" %}		<h3><span class="tooltip tooltip-{{default_right}}" data-tooltip="{{site.loc.audio_speed}}"><img class="cover-icon cover-icon-text" src="{{ "/css" | prepend: site.baseurl }}/speedometer.svg" alt="{{site.loc.audio_speed}}" style="cursor:pointer" onclick="normalspeed()"></span> <span id="slider_tooltip" class="tooltip" data-tooltip="{{site.loc.audio_speed}}: 1×"><input type="range" min="0.5" max="1.5" value="1" step="0.05" id="audio_slider" class="slider" oninput="adjustslider()"></span></h3>
+		<h3><span class="tooltip tooltip-{{default_right}}" data-tooltip="{{site.loc.audio_autoplay_tooltip}}"><img id="autoplay_icon" class="cover-icon cover-icon-text" src="{{ "/css" | prepend: site.baseurl }}/play.svg" alt="{{site.loc.audio_autoplay}}" style="cursor:pointer" onclick="autoplay()"></span></h3>{% endif %}
+	</div>
+</div>
+{% if site.editions_enabled != false %}{% include modaldownload.html %}{% endif %}
+<hr>

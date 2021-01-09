@@ -1,0 +1,21 @@
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon.png?v=4" | prepend: site.baseurl }}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ "/favicon-32x32.png?v=4" | prepend: site.baseurl }}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ "/favicon-16x16.png?v=4" | prepend: site.baseurl }}">
+	<link rel="manifest" href="{{ "/site.webmanifest?v=4" | prepend: site.baseurl }}">
+	<link rel="mask-icon" href="{{ "/safari-pinned-tab.svg?v=4" | prepend: site.baseurl }}" color="#5bbad5">
+	<link rel="shortcut icon" href="{{ "/favicon.ico?v=4" | prepend: site.baseurl }}">
+	<meta name="msapplication-TileColor" content="#00aba9">
+	<meta name="theme-color" content="#ffffff">
+	<title>{% if page.title %}{{ page.title | escape }} - {{ site.title }}{% else %}{{ site.title | escape }}{% endif %}</title>
+	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+	<link rel="stylesheet" href="{{ "/css/spectre.min.css" | prepend: site.baseurl }}">
+	{% if page.language == "ar" %}<link rel="stylesheet" href="{{ "/css/gsn-ar.min.css" | prepend: site.baseurl }}">{% elsif page.language == "fa" %}<link rel="stylesheet" href="{{ "/css/gsn-ar.min.css" | prepend: site.baseurl }}">{% elsif page.language == "ckb" %}<link rel="stylesheet" href="{{ "/css/gsn-ar.min.css" | prepend: site.baseurl }}">{% elsif page.language == "ur" %}<link rel="stylesheet" href="{{ "/css/gsn-ur.min.css" | prepend: site.baseurl }}">{% else %}<link rel="stylesheet" href="{{ "/css/gsn.min.css" | prepend: site.baseurl }}">{% endif %}
+	<link rel="stylesheet" href="{{ "/css" | prepend: site.baseurl }}/fontello.min.css">
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ /feed.xml" | prepend: site.baseurl }}">
+	<script src="{{ "/js" | prepend: site.baseurl }}/sbc.min.js"></script>
+</head>

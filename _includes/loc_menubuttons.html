@@ -1,0 +1,10 @@
+			<a href="{{ "/" | prepend: site.baseurl }}" class="btn btn-primary">{{site.loc.menu_home}}</a>
+			<div class="dropdown">
+				<a href="#" class="btn btn-primary dropdown-toggle" tabindex="0">{{site.loc.menu_about}}</a>
+				<ul class="menu">
+					<li class="menu-item"><a href="{{ "/about" | prepend: site.baseurl }}">{{site.loc.menu_about_us}}</a></li>
+					<li class="menu-item"><a href="{{ "/about" | prepend: site.baseurl }}/languages">{{site.loc.menu_languages}}</a></li>
+				</ul>
+			</div>
+			<a href="{{ "" | prepend: site.baseurl }}/how-to" class="btn btn-primary">{{site.loc.menu_how}}</a>
+			<a href="{{ "" | prepend: site.baseurl }}/contact" class="btn btn-primary">{{site.loc.menu_contact}}</a>

@@ -1,0 +1,130 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Storybooks HamBaangLaang
+email: globalafricanstorybook@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Storybooks HamBaangLaang is designed specifically for teachers, parents, and community members. It makes a growing collection stories from the HamBaangLaang Cantonese Readers project available with text and audio in Cantonese as well as the most widely spoken languages of Hong Kong (with text and audio in Cantonese and other languages).
+baseurl: "/storybooks-hbl" # the subpath of your site, e.g. /blog
+url: "https://global-asp.github.io/" # the base hostname & protocol for your site
+
+# base urls for links
+audio_root: "https://raw.githubusercontent.com/global-asp/hbl-audio/master/audio" # base url for audio files
+image_root: "https://raw.githubusercontent.com/global-asp/hbl-imagebank/master/medium" # base url for images
+pdf_root: "https://globalstorybooks.net/media/sbbd/pdf" # base url for (regular) pdfs
+editions_root: "https://gitlab.com/global-asp/sbbd-pdf/raw/master" # base url for pdf editions
+
+region: HamBaangLaang
+region_adj: Hong Kong
+
+lang1: Cantonese
+lang2: ""
+lang3: ""
+lang1_code: yue
+lang2_code: ""
+lang3_code: ""
+lang1_button: "" # text to appear on the button for default language 1 (default if blank: ISO code)
+lang2_button: "" # text to appear on the button for default language 2 (default if blank: ISO code)
+lang3_button: "" # text to appear on the button for default language 3 (default if blank: ISO code)
+langs_number: 1 # total number of default languages for the site (between 1-3)
+
+logo_filename: sbhbl_logo.svg
+pdfs_enabled: false
+editions_enabled: false
+
+font_import_default: "@import url('https://fonts.googleapis.com/css?family=Noto+Sans');"
+font_import_ar: "@import url(//fonts.googleapis.com/earlyaccess/notonaskharabic.css);"
+font_import_ur: "@import url(//fonts.googleapis.com/earlyaccess/notonastaliqurdu.css);"
+font_family_default: "'Noto Sans', sans-serif"
+font_family_ar: "'Noto Naskh Arabic', sans-serif"
+font_family_ur: "'Noto Nastaliq Urdu', serif"
+
+# external links
+repo: "https://github.com/global-asp/storybooks-hbl"
+
+# Build settings
+markdown: kramdown
+
+# localized strings
+loc:
+  audio_autoplay: "Autoplay story"
+  audio_autoplay_tooltip: "Autoplay story (beta - desktop only)"
+  audio_narrate: "Narrate story"
+  audio_narrate_tooltip: "Narrate full story"
+  audio_next: "Next page"
+  audio_not_available: "The audio for this story is currently not available."
+  audio_play: "Play/pause"
+  audio_prev: "Previous page"
+  audio_speed: "Reading speed"
+  cc_org: "Creative Commons"
+  cc_deed: ""
+  cc_license: "Creative Commons License"
+  cc_some: "Some rights reserved"
+  cc_by: "Attribution"
+  cc_nc: "-NonCommercial"
+  cc_sa: "-ShareAlike"
+  cc_nd: "-NoDerivs"
+  cc_int: "International License"
+  contact_at: " [at] "
+  contact_dot: " [dot] "
+  contact_email: "Email"
+  download_close: "Close"
+  download_options: "Download Options"
+  download_pdf: "Download PDF"
+  download_disabled: "PDF download for this story is currently not available."
+  editions_bil: "Bilingual PDF"
+  editions_bil_bklt: "Bilingual booklet PDF"
+  editions_bil_noimg: "Bilingual imageless PDF"
+  editions_bil_noimg_bklt: "Bilingual imageless booklet"
+  editions_bil_pdfs: "Bilingual PDFs"
+  editions_bklt_mono: "Booklet PDF (monolingual)"
+  editions_bklt_pdfs: "Booklet PDFs (for printing)"
+  editions_landscape: "landscape"
+  editions_noimg_bklt_mono: "Imageless booklet (monolingual)"
+  editions_noimg_mono: "Imageless PDF (monolingual)"
+  editions_reg_mono: "Regular PDF (monolingual)"
+  editions_reg_pdfs: "Regular PDFs (full-page)"
+  editions_wordless_bklt: "Wordless booklet"
+  editions_wordless_landscape: "Wordless PDF (landscape)"
+  error_back: "Back to home"
+  error_not_found: "Page not found"
+  menu_about: "About"
+  menu_about_us: "About us"
+  menu_contact: "Contact us"
+  menu_faq: "FAQ"
+  menu_home: "Home"
+  menu_how: "How to use this website"
+  menu_languages: "Languages"
+  menu_resources: "Resources"
+  menu_source: "Source"
+  menu_teachers: "Teachers"
+  menu_team: "Our team"
+  metadata_asp_from: "from"
+  metadata_asp_source: "Source"
+  metadata_author: "Written by"
+  metadata_illustrator: "Illustrated by"
+  metadata_language: "Language"
+  metadata_level: "Level"
+  metadata_reader: "Read by"
+  metadata_translator: "Translated by"
+  nav_additional: "Additional resources"
+  nav_all_levels: "All levels"
+  nav_back: "Back to stories list"
+  nav_change_language: "Change language"
+  nav_change_level: "Change level"
+  nav_credits: "Story credits"
+  nav_email: "Email us"
+  nav_level1: "Level 1"
+  nav_level2: "Level 2"
+  nav_level3: "Level 3"
+  nav_level4: "Level 4"
+  nav_level5: "Level 5"
+  nav_options: "Options"
+  sitename_asp: "African Storybook"
+  sitename_gsn: "Global Storybooks Portal"
+  sitename_sbc: "Storybooks Canada"

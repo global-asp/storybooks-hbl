@@ -1,0 +1,24 @@
+---
+layout: menupage
+title: "Languages"
+---
+
+<h1>{{site.title}}</h1>
+
+<h2>{{page.title}}</h4>
+
+<div class="container">
+  <p>
+    The following languages are currently included in the scope of the {{site.title}} project:
+
+    <ul class="about-ul">
+      <li><a href="{{ "/stories" | prepend: site.baseurl }}/{{ site.lang1_code }}/">{{ site.lang1 }}</a></li>{% if site.langs_number > 1 %}
+      <li><a href="{{ "/stories" | prepend: site.baseurl }}/{{ site.lang2_code }}/">{{ site.lang2 }}</a></li>{% endif %}{% if site.langs_number > 2 %}
+      <li><a href="{{ "/stories" | prepend: site.baseurl }}/{{ site.lang3_code }}/">{{ site.lang3 }}</a></li>{% endif %}
+    </ul>
+
+    <p>Please note that some translations and recordings are not yet complete.</p>
+
+    <p>We are always looking for translators! If you speak one of the above languages and would like to help us translate or record stories, please contact us at {% include contact_email.html %}</p>
+  </p>
+</div>

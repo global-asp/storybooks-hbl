@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}{% include rtl.html %}
+  <body>
+
+    <div class="container"{{rtl_dir}}>
+
+        {% include header.html %}
+        {% include langselector.html %}
+        {% include storycover.html %}
+        {{ content }}
+        {% include colophon.html %}
+
+    </div>
+
+  </body>
+
+</html>

@@ -1,0 +1,32 @@
+---
+layout: menupage
+title: "About us"
+---
+
+<h1>{{site.title}}</h1>
+
+<h2>{{page.title}}</h2>
+
+<div class="container">
+
+<p>
+{{site.title}} is a website for teachers, parents, and community members that aims to promote bilingualism and multilingualism in {{site.region}}. It makes 40 stories from the <a href="https://africanstorybook.org/" target="_blank">African Storybook</a> available in <a href="{{ "/about" | prepend: site.baseurl }}/languages">the most widely spoken languages</a> of {{site.region}}, in addition to {{site.lang1}}{% if site.langs_number == 2 %} and {{site.lang2}}{% elsif site.langs_number == 3 %}, {{site.lang2}}, and {{site.lang3}}{% endif %}. A story that is read in {{site.lang1}}{% if site.langs_number == 2 %} or {{site.lang2}}{% elsif site.langs_number == 3 %}, {{site.lang2}}, or {{site.lang3}}{% endif %} at school can be read in the mother tongue by parents and children at home. In this way, {{site.title}} helps children to maintain the mother tongue in both oral and print form, while learning {% if site.langs_number == 1 %}the official language of {{site.region}}{% else %}one of {{site.region}}’s official languages{% endif %}. Similarly, the audio versions of the stories can help beginning readers and language learners make the important connection between speech and text.
+</p>
+
+<a name="source"></a><h3 class="about-h3">Source of stories</h3>
+<p>
+All 40 stories on the {{site.title}} website come from the <a href="https://africanstorybook.org/" target="_blank">{{site.loc.sitename_asp}}</a> – a groundbreaking digital initiative of the South African organization <a href="https://www.saide.org.za/" target="_blank">Saide</a>, which promotes literacy for African children. The {{site.loc.sitename_asp}} has hundreds of stories in multiple African languages, as well as English, French, and Portuguese. The stories are openly licensed, which allows the {{site.title}} team to repurpose them for a {{site.region_adj}} audience. We are very grateful to the {{site.loc.sitename_asp}} and Saide for making the stories freely available under an open license.
+</p>
+
+<a name="selection"></a><h3 class="about-h3">Selection of stories and languages</h3>
+<p>
+We selected the 40 stories out of several hundred from the <a href="https://africanstorybook.org/">{{site.loc.sitename_asp}}</a>, and sought to create a collection of stories of different lengths that balance the African origin of the stories with internationally relevant themes. There are traditional animal fables as well as contemporary stories about city life. Some stories cover serious topics like responsibility and gender equality. Others are just written to make you laugh. We hope that the universal values reflected in the stories will resonate with children across {{site.region}}.
+</p>
+
+<a name="acknowledgements"></a><h3 class="about-h3">Acknowledgements</h3>
+<p>{{site.title}} has only been possible with the help of a large number of people, including translators, readers, proofreaders, and others who have been part of the process of making these stories available. We sincerely thank all contributors for their time and effort!</p>
+
+<p>We are particularly grateful to the <a href="https://storybookscanada.ca">{{site.loc.sitename_sbc}}</a> project, which has created the modular website on which {{site.title}} is based.</p>
+
+<p>Icons provided by <a href="https://fontawesome.com/">FontAwesome</a> (via <a href="http://fontello.com/">Fontello</a>) and <a href="https://dohliam.github.io/elegant-circles/">Elegant Circles</a>.</p>
+</div>
